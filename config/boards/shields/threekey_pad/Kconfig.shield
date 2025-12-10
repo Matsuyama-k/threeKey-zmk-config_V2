@@ -1,3 +1,0 @@
-# Kconfig.shield
-config SHIELD_THREEKEY_PAD
-    def_bool $(shields_list_contains,threekey_pad)
