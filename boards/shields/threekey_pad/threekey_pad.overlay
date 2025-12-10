@@ -9,32 +9,32 @@
     };
 };
 
-/* 鍵掃描：1 行 4 列 */
-&nice_nano_v2 {
-    kscan0: kscan {
+/* 1 行 4 列，nice_nano 上嘅 GPIO 腳位 */
+&nice_nano {
+    kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
 
         rows = <1>;
         cols = <4>;
 
-        // Row: P1.10 （共用）
+        // Row: P1.10
         row-gpios = <&gpio1 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
 
-        // Col: P0.11, P1.04, P1.06, P0.24 （四粒鍵）
+        // Col: P0.11, P1.04, P1.06, P0.24
         col-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>,
                     <&gpio1 4  GPIO_ACTIVE_LOW>,
                     <&gpio1 6  GPIO_ACTIVE_LOW>,
                     <&gpio0 24 GPIO_ACTIVE_LOW>;
     };
 
-    /* 1×4 矩陣 -> K00, K01, K02, K03 */
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
 
         rows = <1>;
         columns = <4>;
 
+        // K00, K01, K02, K03
         map = <RC(0,0) RC(0,1) RC(0,2) RC(0,3)>;
     };
 };
