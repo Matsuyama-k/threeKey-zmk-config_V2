@@ -7,13 +7,7 @@
 
         default_layer: default_layer {
             bindings = <
-                &kp LCTRL(C)     &kp LCTRL(V)     &kp LALT(TAB)    &mo 1
-            >;
-        };
-
-        mac_layer: mac_layer {
-            bindings = <
-                &kp LCMD(C)      &kp LCMD(V)      &kp LCMD(TAB)    &tog 1
+                &kp A    &kp B    &kp C    &kp D
             >;
         };
     };
