@@ -22,3 +22,5 @@
 include:
   - board: nice_nano
     shield: threekey_pad
+    cmake-args:
+      - -DCONF_FILE="prj.conf;boards/shields/threekey_pad/threekey_pad.conf"
