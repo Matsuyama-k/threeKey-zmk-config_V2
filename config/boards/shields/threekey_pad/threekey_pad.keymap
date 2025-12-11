@@ -9,12 +9,14 @@
             bindings = <
                 &kp LCTRL(C)     &kp LCTRL(V)     &kp LALT(TAB)    &mo 1
             >;
+            sensor-bindings = <>;
         };
 
         mac_layer: mac_layer {
             bindings = <
                 &kp LCMD(C)      &kp LCMD(V)      &kp LCMD(TAB)    &tog 1
             >;
+            sensor-bindings = <>;
         };
     };
 };
