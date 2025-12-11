@@ -7,7 +7,7 @@
 
         default_layer: default_layer {
             bindings = <
-                &kp A    &kp B    &kp C    &kp D
+                &kp LCTRL(&kp C)    &kp LCTRL(&kp V)    &kp LALT(&kp TAB)    &mo 1
             >;
         };
     };
