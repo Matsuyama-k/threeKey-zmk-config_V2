@@ -5,21 +5,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-        /* Layer 0: Windows（預設） */
-        default_layer {
+        default_layer: default_layer {
             bindings = <
-                &kp LCTRL(C)     // K00: Ctrl + C
-                &kp LCTRL(V)     // K01: Ctrl + V
-                &kp LALT(TAB)    // K02: Alt + Tab
+                &kp LCTRL(C)     &kp LCTRL(V)     &kp LALT(TAB)    &mo 1
             >;
         };
 
-        /* Layer 1: Mac */
-        mac_layer {
+        mac_layer: mac_layer {
             bindings = <
-                &kp LCMD(C)      // K00: Cmd + C
-                &kp LCMD(V)      // K01: Cmd + V
-                &kp LCMD(TAB)    // K02: Cmd + Tab
+                &kp LCMD(C)      &kp LCMD(V)      &kp LCMD(TAB)    &tog 1
             >;
         };
     };

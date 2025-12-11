@@ -9,18 +9,12 @@
     };
 };
 
-/* 1 行 4 列，直接掛喺 root node */
 &{/} {
     kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
 
-        // 唔再用 rows / cols 屬性，只用腳位數量決定矩陣大小
-
-        // Row: P1.10
         row-gpios = <&gpio1 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-
-        // Col: P0.11, P1.04, P1.06, P0.24
         col-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>,
                     <&gpio1 4  GPIO_ACTIVE_LOW>,
                     <&gpio1 6  GPIO_ACTIVE_LOW>,
@@ -30,7 +24,6 @@
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
 
-        // 仍然喺 transform 度寫明幾多 rows/columns
         rows = <1>;
         columns = <4>;
 
