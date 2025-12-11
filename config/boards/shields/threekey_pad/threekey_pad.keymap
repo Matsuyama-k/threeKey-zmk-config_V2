@@ -1,14 +1,5 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-
-/ {
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer: default_layer {
-            bindings = <
-                &kp LC(C)    &kp LC(V)    &kp LA(TAB)    &mo 1
-            >;
-        };
-    };
+default_layer: default_layer {
+    bindings = <
+        &kp A    &kp B    &kp C    &kp D
+    >;
 };
